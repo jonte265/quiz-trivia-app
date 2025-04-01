@@ -4,7 +4,7 @@ An interactive quiz application where users can answer questions and receive ins
 
 ## Live Demo
 
-Check out live version here:
+Check out live version here: https://quiz-app358.netlify.app/
 
 ## 🚀 Technologies
 
