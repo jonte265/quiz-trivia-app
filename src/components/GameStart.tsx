@@ -6,7 +6,7 @@ function GameStart() {
   const GameStore = useGameStore();
 
   return (
-    <main className='flex flex-col items-center gap-4 justify-center h-screen bg-background text-text'>
+    <main className='flex flex-col items-center gap-4 p-4 justify-center h-screen bg-background text-text'>
       <h3 className='text-text-600'>
         Progress: {GameStore.currentQuestionIndex + 1}/{questions.length}
       </h3>
@@ -20,14 +20,14 @@ function GameStart() {
             Correct answer: {GameStore.correctAnswer}
           </h3>
           <button
-            className='p-8 mt-8 min-w-80 bg-secondary text-text rounded-full font-semibold text-2xl hover:bg-secondary/80  transition duration-200 ease-in-out cursor-pointer active:scale-95 hover:scale-105'
+            className='p-8 mt-8 bg-secondary text-text rounded-full font-semibold text-2xl hover:bg-secondary/80  transition duration-200 ease-in-out cursor-pointer active:scale-95 hover:scale-105'
             onClick={GameStore.restartGame}
           >
             Restart
           </button>
         </div>
       ) : (
-        <div className='grid grid-cols-2 gap-4 mt-8'>
+        <div className='grid grid-cols-2 justify-center items-center gap-4 mt-8 w-full md:max-w-2xl'>
           {GameStore.currentOptions.map((option, index) => (
             <AnswerBtn answer={option} key={index} />
           ))}

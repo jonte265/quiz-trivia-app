@@ -10,7 +10,7 @@ function AnswerBtn({ answer }: AnswerBtnProps) {
   return (
     <button
       onClick={() => GameStore.nextAnswer(answer)}
-      className='p-8 min-w-80 bg-primary text-text rounded-full font-semibold text-2xl hover:bg-primary/80  transition duration-200 ease-in-out cursor-pointer active:scale-95 hover:scale-105'
+      className='p-6 sm:p-8 text-center text-2xl font-semibold bg-primary text-text rounded-full hover:bg-primary/80  transition duration-200 ease-in-out cursor-pointer active:scale-95 hover:scale-105'
     >
       {answer}
     </button>
