@@ -1,6 +1,10 @@
-# 🧠 Quiz App
+# 🎯 Quiz App
 
 An interactive quiz application where users can answer questions and receive instant feedback on their responses.
+
+## Live Demo
+
+Check out live version here:
 
 ## 🚀 Technologies
 
