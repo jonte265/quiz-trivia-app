@@ -8,7 +8,7 @@ function GameStart() {
   return (
     <main className='flex flex-col items-center gap-4 justify-center h-screen bg-background text-text'>
       <h3 className='text-text-600'>
-        Progress: {GameStore.currentQuestionIndex}/{questions.length}
+        Progress: {GameStore.currentQuestionIndex + 1}/{questions.length}
       </h3>
       <h3 className=''>Score: {GameStore.score}</h3>
       <h2 className='font-bold text-center text-4xl'>
