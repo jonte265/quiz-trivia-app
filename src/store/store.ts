@@ -8,7 +8,9 @@ type GameStoreType = {
   currentOptions: string[];
   correctAnswer: string;
 
+  restartMode: boolean;
   nextAnswer: () => void;
+  restartGame: () => void;
 };
 
 const useGameStore = create<GameStoreType>((set) => ({
@@ -18,6 +20,8 @@ const useGameStore = create<GameStoreType>((set) => ({
   currentQuestion: questions[0].question,
   currentOptions: questions[0].options,
   correctAnswer: questions[0].answer,
+
+  restartMode: false,
 
   nextAnswer: (answer: string) =>
     set((state) => {
@@ -43,9 +47,20 @@ const useGameStore = create<GameStoreType>((set) => ({
       } else {
         return {
           currentQuestion: 'Wrong, Game over',
+          restartMode: true,
         };
       }
     }),
+
+  restartGame: () =>
+    set(() => ({
+      score: 0,
+      currentQuestionIndex: 0,
+      currentQuestion: questions[0].question,
+      currentOptions: questions[0].options,
+      correctAnswer: questions[0].answer,
+      restartMode: false,
+    })),
 }));
 
 export default useGameStore;
