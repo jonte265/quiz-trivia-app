@@ -6,18 +6,17 @@ function GameStart() {
   const GameStore = useGameStore();
 
   return (
-    <main className='flex flex-col items-center justify-center h-screen bg-background text-text'>
-      {/* <h2 className='font-bold text-4xl'>{currentQuestion.question}</h2>
+    <main className='flex flex-col items-center gap-4 justify-center h-screen bg-background text-text'>
+      <h3 className='font-semibold'>Count: {GameStore.score}</h3>
+      <h3 className='font-semibold'>
+        Progress: {GameStore.currentQuestionIndex}/{questions.length}
+      </h3>
+      <h2 className='font-bold text-4xl'>{GameStore.currentQuestion}</h2>
+
       <div className='grid grid-cols-2 gap-4 mt-8'>
-        {currentQuestion.options.map((option, index) => (
+        {GameStore.currentOptions.map((option, index) => (
           <AnswerBtn answer={option} key={index} />
         ))}
-      </div> */}
-
-      <div>
-        <p>Count: {GameStore.score}</p>
-        <button onClick={GameStore.increment}>Add one</button>
-        <button onClick={GameStore.decrement}>Remove one</button>
       </div>
     </main>
   );

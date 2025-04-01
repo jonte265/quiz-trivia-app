@@ -1,6 +1,13 @@
+import useGameStore from '../store/store.ts';
+
 function AnswerBtn({ answer }) {
+  const GameStore = useGameStore();
+
   return (
-    <button className='p-8 bg-primary text-text rounded-4xl font-semibold text-2xl hover:bg-primary/80  transition duration-200 ease-in-out cursor-pointer active:scale-95 hover:scale-105'>
+    <button
+      onClick={() => GameStore.nextAnswer(answer)}
+      className='p-8 bg-primary text-text rounded-4xl font-semibold text-2xl hover:bg-primary/80  transition duration-200 ease-in-out cursor-pointer active:scale-95 hover:scale-105'
+    >
       {answer}
     </button>
   );
