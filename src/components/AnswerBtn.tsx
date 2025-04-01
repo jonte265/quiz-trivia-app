@@ -1,6 +1,10 @@
 import useGameStore from '../store/store.ts';
 
-function AnswerBtn({ answer }) {
+type AnswerBtnProps = {
+  answer: string;
+};
+
+function AnswerBtn({ answer }: AnswerBtnProps) {
   const GameStore = useGameStore();
 
   return (

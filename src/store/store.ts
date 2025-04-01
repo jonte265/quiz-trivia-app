@@ -9,7 +9,7 @@ type GameStoreType = {
   correctAnswer: string;
 
   restartMode: boolean;
-  nextAnswer: () => void;
+  nextAnswer: (answer: string) => void;
   restartGame: () => void;
 };
 
@@ -23,7 +23,7 @@ const useGameStore = create<GameStoreType>((set) => ({
 
   restartMode: false,
 
-  nextAnswer: (answer: string) =>
+  nextAnswer: (answer) =>
     set((state) => {
       // Check if no more questions
       if (state.currentQuestionIndex >= questions.length - 1) {
