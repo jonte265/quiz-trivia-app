@@ -1,1 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', serif;
+
+  --color-text: hsl(190, 40%, 6%);
+  --color-text-600: hsl(190, 40%, 40%);
+  --color-background: hsl(180, 37%, 96%);
+  --color-primary: hsl(187, 39%, 54%);
+  --color-secondary: hsl(13, 39%, 72%);
+  --color-accent: hsl(72, 40%, 60%);
+}

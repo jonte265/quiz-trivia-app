@@ -1,7 +1,13 @@
+import NavHeader from './components/NavHeader';
+import Footer from './components/Footer';
+import GameStart from './components/GameStart';
+
 function App() {
   return (
     <>
-      <h1 className='bg-amber-300'>yoyoy</h1>
+      <NavHeader />
+      <GameStart />
+      <Footer />
     </>
   );
 }
