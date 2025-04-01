@@ -1,0 +1,62 @@
+[
+  {
+    "question": "Vad är huvudstaden i Frankrike?",
+    "options": ["Berlin", "Madrid", "Paris", "Rom"],
+    "answer": "Paris"
+  },
+  {
+    "question": "Vilken planet är närmast solen?",
+    "options": ["Venus", "Jorden", "Merkurius", "Mars"],
+    "answer": "Merkurius"
+  },
+  {
+    "question": "Hur många ben har en spindel?",
+    "options": ["6", "8", "10", "12"],
+    "answer": "8"
+  },
+  {
+    "question": "Vem skrev 'Romeo och Julia'?",
+    "options": [
+      "Charles Dickens",
+      "William Shakespeare",
+      "Jane Austen",
+      "Mark Twain"
+    ],
+    "answer": "William Shakespeare"
+  },
+  {
+    "question": "Vilket år landade människan på månen för första gången?",
+    "options": ["1965", "1969", "1972", "1980"],
+    "answer": "1969"
+  },
+  {
+    "question": "Vad heter världens största hav?",
+    "options": [
+      "Atlanten",
+      "Indiska oceanen",
+      "Stilla havet",
+      "Arktiska oceanen"
+    ],
+    "answer": "Stilla havet"
+  },
+  {
+    "question": "Vilket grundämne har den kemiska beteckningen O?",
+    "options": ["Guld", "Syre", "Silver", "Kväve"],
+    "answer": "Syre"
+  },
+  {
+    "question": "Hur många strängar har en vanlig gitarr?",
+    "options": ["4", "5", "6", "7"],
+    "answer": "6"
+  },
+  {
+    "question": "Vad heter världens högsta berg?",
+    "options": ["Kilimanjaro", "K2", "Mount Everest", "Mont Blanc"],
+    "answer": "Mount Everest"
+  },
+  {
+    "question": "Vilken färg får man om man blandar blått och gult?",
+    "options": ["Röd", "Grön", "Lila", "Orange"],
+    "answer": "Grön"
+  }
+]
