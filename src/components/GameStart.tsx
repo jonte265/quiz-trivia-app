@@ -11,7 +11,7 @@ function GameStart() {
   return (
     <main className='flex flex-col items-center gap-4 p-4 justify-center bg-background text-text'>
       <h3 className='text-text-600'>
-        Progress: {GameStore.currentQuestionIndex + 1}/{questions.length}
+        Question: {GameStore.currentQuestionIndex + 1}/{questions.length}
       </h3>
       <ProgressBar
         progressValue={
