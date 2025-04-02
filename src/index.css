@@ -20,3 +20,22 @@
   --color-secondary: hsl(248, 50%, 31%);
   --color-accent: hsl(262, 50%, 53%); */
 }
+
+progress {
+  width: 100%;
+  border-radius: 5rem;
+}
+progress::-webkit-progress-bar {
+  background-color: hsl(206, 51%, 92%);
+  border-radius: 5rem;
+}
+progress::-webkit-progress-value {
+  background-color: hsl(212, 48%, 40%);
+  border-radius: 5rem;
+  transition: all 0.5s ease-in-out;
+}
+progress::-moz-progress-bar {
+  background-color: hsl(212, 48%, 40%);
+  border-radius: 5rem;
+  transition: all 0.4s ease-in-out;
+}

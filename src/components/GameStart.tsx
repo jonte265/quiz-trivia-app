@@ -2,6 +2,7 @@ import AnswerBtn from './AnswerBtn';
 import questions from '../data/questions.json';
 import useGameStore from '../store/store.ts';
 import PrimaryBtn from './PrimaryBtn.tsx';
+import ProgressBar from './ProgressBar.tsx';
 
 function GameStart() {
   const GameStore = useGameStore();
@@ -11,6 +12,11 @@ function GameStart() {
       <h3 className='text-text-600'>
         Progress: {GameStore.currentQuestionIndex + 1}/{questions.length}
       </h3>
+      <ProgressBar
+        progressValue={
+          (GameStore.currentQuestionIndex / (questions.length - 1)) * 100
+        }
+      />
       <h3 className=''>
         Score: <strong>{GameStore.score}</strong>
       </h3>
