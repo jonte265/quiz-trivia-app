@@ -22,9 +22,12 @@
 }
 
 progress {
-  width: 100%;
   border-radius: 5rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
+
 progress::-webkit-progress-bar {
   background-color: hsl(206, 51%, 92%);
   border-radius: 5rem;
