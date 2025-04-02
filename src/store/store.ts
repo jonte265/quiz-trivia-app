@@ -14,8 +14,10 @@ type GameStoreType = {
   correctAnswer: string;
   restartMode: boolean;
   gameCompleteMode: boolean;
+  timesUpMode: boolean;
   nextAnswer: (answer: string) => void;
   restartGame: () => void;
+  timesUp: () => void;
 };
 
 const useGameStore = create<GameStoreType>((set) => {
@@ -31,6 +33,7 @@ const useGameStore = create<GameStoreType>((set) => {
 
     restartMode: false,
     gameCompleteMode: false,
+    timesUpMode: false,
 
     nextAnswer: (answer) =>
       set((state) => {
@@ -75,6 +78,15 @@ const useGameStore = create<GameStoreType>((set) => {
           correctAnswer: newShuffledQuestions[0].answer,
           restartMode: false,
           gameCompleteMode: false,
+          timesUpMode: false,
+        };
+      }),
+
+    timesUp: () =>
+      set(() => {
+        return {
+          currentQuestion: 'Times up! 🚨 Game Over ',
+          timesUpMode: true,
         };
       }),
   };

@@ -3,6 +3,7 @@ import questions from '../data/questions.json';
 import useGameStore from '../store/store.ts';
 import PrimaryBtn from './PrimaryBtn.tsx';
 import ProgressBar from './ProgressBar.tsx';
+import Timer from './Timer.tsx';
 
 function GameStart() {
   const GameStore = useGameStore();
@@ -43,6 +44,14 @@ function GameStart() {
           </h3>
           <PrimaryBtn text='Play again' onClick={GameStore.restartGame} />
         </div>
+      ) : GameStore.timesUpMode ? (
+        <div className='flex flex-col justify-center items-center gap-4'>
+          <h3 className='text-center'>
+            Final score: <strong>{GameStore.score}</strong>
+            <strong> / {questions.length}</strong>
+          </h3>
+          <PrimaryBtn text='Restart' onClick={GameStore.restartGame} />
+        </div>
       ) : (
         <div className='grid grid-cols-2 justify-center items-center gap-4 mt-8 w-full md:max-w-2xl'>
           {GameStore.currentOptions.map((option, index) => (
@@ -50,6 +59,7 @@ function GameStart() {
           ))}
         </div>
       )}
+      <Timer />
     </main>
   );
 }
