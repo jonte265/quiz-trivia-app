@@ -32,7 +32,7 @@ function Timer() {
 
   return (
     <>
-      <p>{timer}</p>
+      <p className='mt-4'>{timer}</p>
     </>
   );
 }
