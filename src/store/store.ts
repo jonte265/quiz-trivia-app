@@ -9,6 +9,7 @@ type GameStoreType = {
   correctAnswer: string;
 
   restartMode: boolean;
+  gameCompleteMode: boolean;
   nextAnswer: (answer: string) => void;
   restartGame: () => void;
 };
@@ -22,6 +23,7 @@ const useGameStore = create<GameStoreType>((set) => ({
   correctAnswer: questions[0].answer,
 
   restartMode: false,
+  gameCompleteMode: false,
 
   nextAnswer: (answer) =>
     set((state) => {
@@ -34,7 +36,8 @@ const useGameStore = create<GameStoreType>((set) => ({
         if (state.currentQuestionIndex >= questions.length - 1) {
           return {
             score: state.score + 1,
-            currentQuestion: 'No more questions',
+            currentQuestion: 'Game Complete! 🎉',
+            gameCompleteMode: true,
           };
         }
 
@@ -61,6 +64,7 @@ const useGameStore = create<GameStoreType>((set) => ({
       currentOptions: questions[0].options,
       correctAnswer: questions[0].answer,
       restartMode: false,
+      gameCompleteMode: false,
     })),
 }));
 
