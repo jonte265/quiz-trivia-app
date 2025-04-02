@@ -27,7 +27,11 @@ function GameStart() {
       {GameStore.restartMode ? (
         <div className='flex flex-col justify-center items-center gap-4'>
           <h3 className='text-center'>
-            Correct answer: {GameStore.correctAnswer}
+            Correct answer: <strong>{GameStore.correctAnswer}</strong>
+          </h3>
+          <h3 className='text-center'>
+            Final score: <strong>{GameStore.score}</strong>
+            <strong> / {questions.length}</strong>
           </h3>
           <PrimaryBtn text='Restart' onClick={GameStore.restartGame} />
         </div>
@@ -35,6 +39,7 @@ function GameStart() {
         <div className='flex flex-col justify-center items-center gap-4'>
           <h3 className='text-center'>
             Final score: <strong>{GameStore.score}</strong>
+            <strong> / {questions.length}</strong>
           </h3>
           <PrimaryBtn text='Play again' onClick={GameStore.restartGame} />
         </div>
