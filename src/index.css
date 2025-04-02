@@ -4,10 +4,19 @@
 @theme {
   --font-sans: 'Inter', serif;
 
-  --color-text: hsl(190, 40%, 6%);
-  --color-text-600: hsl(190, 40%, 40%);
-  --color-background: hsl(180, 37%, 96%);
-  --color-primary: hsl(187, 39%, 54%);
-  --color-secondary: hsl(13, 39%, 72%);
-  --color-accent: hsl(72, 40%, 60%);
+  /* light */
+  --color-text: hsl(212, 48%, 6%);
+  --color-text-600: hsl(212, 48%, 40%);
+  --color-background: hsl(206, 51%, 92%);
+  --color-primary: hsl(213, 50%, 28%);
+  --color-secondary: hsl(248, 50%, 69%);
+  --color-accent: hsl(262, 50%, 47%);
+
+  /* dark */
+  /* --color-text: hsl(210, 50%, 94%);
+  --color-text-600: hsl(210, 50%, 40%);
+  --color-background: hsl(207, 50%, 8%);
+  --color-primary: hsl(213, 50%, 72%);
+  --color-secondary: hsl(248, 50%, 31%);
+  --color-accent: hsl(262, 50%, 53%); */
 }
