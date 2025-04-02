@@ -1,6 +1,6 @@
 function NavHeader() {
   return (
-    <nav className='bg-background text-text p-4 mb-16'>
+    <nav className='bg-background text-text p-4 mb-16 text-lg'>
       <h1 className='text-center font-semibold'> Quiz Master </h1>
     </nav>
   );

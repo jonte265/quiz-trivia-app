@@ -25,21 +25,22 @@ const useGameStore = create<GameStoreType>((set) => ({
 
   nextAnswer: (answer) =>
     set((state) => {
-      // Check if no more questions
-      if (state.currentQuestionIndex >= questions.length - 1) {
-        return { currentQuestion: 'No more questions' };
-      }
-
       // Check correct answer
       const isCorrect = answer === state.correctAnswer;
       const nextIndex = state.currentQuestionIndex + 1;
 
       if (isCorrect) {
+        // Check if no more questions
+        if (state.currentQuestionIndex >= questions.length - 1) {
+          return {
+            score: state.score + 1,
+            currentQuestion: 'No more questions',
+          };
+        }
+
         return {
           currentQuestionIndex: nextIndex,
-
           score: state.score + 1,
-
           currentQuestion: questions[nextIndex].question,
           currentOptions: questions[nextIndex].options,
           correctAnswer: questions[nextIndex].answer,
