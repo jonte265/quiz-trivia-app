@@ -31,3 +31,9 @@ Check out live version here: https://quiz-app358.netlify.app/
 🔄 Ability to replay the quiz
 
 📊 Score tracking
+
+⏳ Countdown timer for each question
+
+📈 Progress bar to track quiz completion
+
+🔀 Randomized question order
