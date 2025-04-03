@@ -60,7 +60,7 @@ const useGameStore = create<GameStoreType>((set) => {
           };
         } else {
           return {
-            currentQuestion: 'Wrong, Game over',
+            currentQuestion: 'Wrong answer! Game Over ❌',
             restartMode: true,
           };
         }
@@ -85,7 +85,7 @@ const useGameStore = create<GameStoreType>((set) => {
     timesUp: () =>
       set(() => {
         return {
-          currentQuestion: 'Times up! 🚨 Game Over ',
+          currentQuestion: 'Times up! Game Over 🚨',
           timesUpMode: true,
         };
       }),

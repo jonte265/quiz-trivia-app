@@ -10,17 +10,24 @@ function GameStart() {
 
   return (
     <main className='flex flex-col items-center gap-4 p-4 justify-center bg-background text-text'>
-      <h3 className='text-text-600'>
-        Question: {GameStore.currentQuestionIndex + 1}/{questions.length}
-      </h3>
-      <ProgressBar
-        progressValue={
-          (GameStore.currentQuestionIndex / (questions.length - 1)) * 100
-        }
-      />
-      <h3 className=''>
-        Score: <strong>{GameStore.score}</strong>
-      </h3>
+      <div className='flex flex-col w-full md:max-w-[500px]'>
+        <Timer />
+        <div className='flex justify-between mt-4 mb-1 '>
+          <h3 className='text-text-600'>
+            Question: {GameStore.currentQuestionIndex + 1}/{questions.length}
+          </h3>
+          <h3 className=''>
+            Score: <strong>{GameStore.score}</strong>
+          </h3>
+        </div>
+
+        <ProgressBar
+          progressValue={
+            (GameStore.currentQuestionIndex / (questions.length - 1)) * 100
+          }
+        />
+      </div>
+
       <h2 className='mt-8 font-bold text-center text-2xl'>
         {GameStore.currentQuestion}
       </h2>
@@ -59,7 +66,6 @@ function GameStart() {
           ))}
         </div>
       )}
-      <Timer />
     </main>
   );
 }
