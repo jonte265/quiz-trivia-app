@@ -10,7 +10,7 @@ function AnswerBtn({ answer }: AnswerBtnProps) {
   return (
     <button
       onClick={() => GameStore.nextAnswer(answer)}
-      className='py-4 font-semibold bg-text text-background rounded-full hover:bg-text/80  transition duration-200 ease-in-out cursor-pointer active:scale-98 hover:scale-102'
+      className='py-4 w-full font-semibold bg-text text-background rounded-full hover:bg-text/80  transition duration-200 ease-in-out cursor-pointer active:scale-98 hover:scale-102'
     >
       {answer}
     </button>

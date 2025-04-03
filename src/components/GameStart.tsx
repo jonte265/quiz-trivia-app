@@ -53,7 +53,7 @@ function GameStart() {
           <PrimaryBtn text='Restart' onClick={GameStore.restartGame} />
         </div>
       ) : (
-        <div className='grid grid-cols-2 justify-center items-center gap-4 mt-8 w-full md:max-w-2xl'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 justify-center items-center gap-4 mt-4 w-full md:max-w-2xl'>
           {GameStore.currentOptions.map((option, index) => (
             <AnswerBtn answer={option} key={index} />
           ))}
