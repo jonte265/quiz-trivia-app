@@ -53,6 +53,7 @@ function GameStart() {
             <strong> / {questions.length}</strong>
           </h3>
           <PrimaryBtn text='Restart' onClick={GameStore.restartGame} />
+          <PrimaryBtn text='Menu' onClick={GameStore.goToStartScreen} />
         </div>
       ) : GameStore.gameCompleteMode ? (
         <div className='flex flex-col justify-center items-center gap-4'>
@@ -61,6 +62,7 @@ function GameStart() {
             <strong> / {questions.length}</strong>
           </h3>
           <PrimaryBtn text='Play again' onClick={GameStore.restartGame} />
+          <PrimaryBtn text='Menu' onClick={GameStore.goToStartScreen} />
         </div>
       ) : GameStore.timesUpMode ? (
         <div className='flex flex-col justify-center items-center gap-4'>
@@ -69,6 +71,7 @@ function GameStart() {
             <strong> / {questions.length}</strong>
           </h3>
           <PrimaryBtn text='Restart' onClick={GameStore.restartGame} />
+          <PrimaryBtn text='Menu' onClick={GameStore.goToStartScreen} />
         </div>
       ) : (
         <div className='grid grid-cols-1 sm:grid-cols-2 justify-center items-center gap-4 mt-4 w-full md:max-w-2xl'>

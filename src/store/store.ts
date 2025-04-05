@@ -20,6 +20,7 @@ type GameStoreType = {
   restartGame: () => void;
   timesUp: () => void;
   homeScreenStartGame: () => void;
+  goToStartScreen: () => void;
 };
 
 const useGameStore = create<GameStoreType>((set) => {
@@ -93,10 +94,29 @@ const useGameStore = create<GameStoreType>((set) => {
         };
       }),
 
+    //Home screen start game and restart settings
     homeScreenStartGame: () =>
       set(() => {
+        const newShuffledQuestions = shuffleQuestions();
+
         return {
           homeScreen: false,
+
+          score: 0,
+          currentQuestionIndex: 0,
+          currentQuestion: newShuffledQuestions[0].question,
+          currentOptions: newShuffledQuestions[0].options,
+          correctAnswer: newShuffledQuestions[0].answer,
+          restartMode: false,
+          gameCompleteMode: false,
+          timesUpMode: false,
+        };
+      }),
+
+    goToStartScreen: () =>
+      set(() => {
+        return {
+          homeScreen: true,
         };
       }),
   };
