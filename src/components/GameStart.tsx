@@ -4,9 +4,20 @@ import useGameStore from '../store/store.ts';
 import PrimaryBtn from './PrimaryBtn.tsx';
 import ProgressBar from './ProgressBar.tsx';
 import Timer from './Timer.tsx';
+import { useEffect, useState } from 'react';
 
 function GameStart() {
   const GameStore = useGameStore();
+
+  const [randomizeAnswers, setRandomizeAnswers] = useState(['']);
+
+  useEffect(() => {
+    const shuffledAnswers = [...GameStore.currentOptions].sort(
+      () => Math.random() - 0.5
+    );
+
+    setRandomizeAnswers(shuffledAnswers);
+  }, [GameStore.currentOptions]);
 
   return (
     <main className='flex flex-col items-center gap-4 p-4 justify-center bg-background text-text'>
@@ -61,7 +72,7 @@ function GameStart() {
         </div>
       ) : (
         <div className='grid grid-cols-1 sm:grid-cols-2 justify-center items-center gap-4 mt-4 w-full md:max-w-2xl'>
-          {GameStore.currentOptions.map((option, index) => (
+          {randomizeAnswers.map((option, index) => (
             <AnswerBtn answer={option} key={index} />
           ))}
         </div>
