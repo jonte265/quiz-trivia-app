@@ -1,0 +1,57 @@
+[
+  {
+    "question": "Vem sjunger låten 'Shape of You'?",
+    "options": ["Ed Sheeran", "Justin Bieber", "Shawn Mendes", "Ariana Grande"],
+    "answer": "Ed Sheeran"
+  },
+  {
+    "question": "Vilket band sjöng låten 'Bohemian Rhapsody'?",
+    "options": ["The Beatles", "Queen", "The Rolling Stones", "Pink Floyd"],
+    "answer": "Queen"
+  },
+  {
+    "question": "Vad heter den svenska popgruppen som sjöng 'Dancing Queen'?",
+    "options": ["ABBA", "Ace of Base", "Roxette", "The Cardigans"],
+    "answer": "ABBA"
+  },
+  {
+    "question": "Vilken artist släppte albumet 'Thriller'?",
+    "options": [
+      "Michael Jackson",
+      "Prince",
+      "Whitney Houston",
+      "Stevie Wonder"
+    ],
+    "answer": "Michael Jackson"
+  },
+  {
+    "question": "Vilket år släppte The Beatles sitt album 'Sgt. Pepper's Lonely Hearts Club Band'?",
+    "options": ["1967", "1965", "1970", "1963"],
+    "answer": "1967"
+  },
+  {
+    "question": "Vilken låt var Lady Gagas genombrottslåt?",
+    "options": ["Poker Face", "Bad Romance", "Just Dance", "Lovegame"],
+    "answer": "Just Dance"
+  },
+  {
+    "question": "Vad heter Taylor Swifts första album?",
+    "options": ["Fearless", "1989", "Red", "Taylor Swift"],
+    "answer": "Taylor Swift"
+  },
+  {
+    "question": "Vilken genre är artisten Kendrick Lamar mest känd för?",
+    "options": ["Rock", "Pop", "Hip-hop", "Elektronisk"],
+    "answer": "Hip-hop"
+  },
+  {
+    "question": "Vem sjöng hitlåten 'Like a Rolling Stone'?",
+    "options": ["Bob Dylan", "Neil Young", "Johnny Cash", "Bruce Springsteen"],
+    "answer": "Bob Dylan"
+  },
+  {
+    "question": "Vad heter den brittiska bandet som sjöng 'Wonderwall'?",
+    "options": ["Coldplay", "Oasis", "Radiohead", "The Verve"],
+    "answer": "Oasis"
+  }
+]

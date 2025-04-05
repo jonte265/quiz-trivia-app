@@ -1,0 +1,62 @@
+[
+  {
+    "question": "Vilken typ av mat är sushi?",
+    "options": ["Japansk", "Kinesisk", "Thailändsk", "Koreansk"],
+    "answer": "Japansk"
+  },
+  {
+    "question": "Vad är huvudingredienserna i guacamole?",
+    "options": [
+      "Tomat och paprika",
+      "Avokado och lök",
+      "Bönor och ris",
+      "Olja och vinäger"
+    ],
+    "answer": "Avokado och lök"
+  },
+  {
+    "question": "Vilken dryck tillverkas av jästa druvor?",
+    "options": ["Öl", "Vin", "Whisky", "Cider"],
+    "answer": "Vin"
+  },
+  {
+    "question": "Vad är en traditionell italiensk pastarätt som innehåller ägg och ost?",
+    "options": ["Spaghetti Bolognese", "Lasagne", "Carbonara", "Pesto"],
+    "answer": "Carbonara"
+  },
+  {
+    "question": "Vilken typ av ost används i en klassisk pizza Margherita?",
+    "options": ["Cheddar", "Mozzarella", "Parmesan", "Feta"],
+    "answer": "Mozzarella"
+  },
+  {
+    "question": "Vad heter den kända franska maträtten med långkokt nötkött i rödvin?",
+    "options": [
+      "Coq au vin",
+      "Bouillabaisse",
+      "Ratatouille",
+      "Boeuf Bourguignon"
+    ],
+    "answer": "Boeuf Bourguignon"
+  },
+  {
+    "question": "Vilken typ av mat är en 'Taco'?",
+    "options": ["Mexikansk", "Spansk", "Fransk", "Italiensk"],
+    "answer": "Mexikansk"
+  },
+  {
+    "question": "Vad är den huvudsakliga ingrediensen i hummus?",
+    "options": ["Tomater", "Ärtor", "Kikärtor", "Linser"],
+    "answer": "Kikärtor"
+  },
+  {
+    "question": "Vilken alkoholhaltig dryck är baserad på agave?",
+    "options": ["Tequila", "Vodka", "Rum", "Gin"],
+    "answer": "Tequila"
+  },
+  {
+    "question": "Vilken är den mest populära typen av kaffe i Sverige?",
+    "options": ["Cappuccino", "Latte", "Espresso", "Filterkaffe"],
+    "answer": "Filterkaffe"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Food and Drink",
+    "id": "food"
+  },
+  {
+    "name": "General Knowledge",
+    "id": "general"
+  },
+  {
+    "name": "Movies and TV",
+    "id": "movies"
+  },
+  {
+    "name": "Music",
+    "id": "music"
+  },
+  {
+    "name": "Sports",
+    "id": "sports"
+  }
+]

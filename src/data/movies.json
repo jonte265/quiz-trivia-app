@@ -1,0 +1,82 @@
+[
+  {
+    "question": "Vem spelade huvudrollen i filmen 'Forrest Gump'?",
+    "options": ["Tom Hanks", "Brad Pitt", "Johnny Depp", "Matt Damon"],
+    "answer": "Tom Hanks"
+  },
+  {
+    "question": "Vilken film vann Oscar för bästa film 2020?",
+    "options": ["Parasite", "1917", "Joker", "Once Upon a Time in Hollywood"],
+    "answer": "Parasite"
+  },
+  {
+    "question": "Vilken TV-serie utspelar sig i staden Hawkins, Indiana?",
+    "options": [
+      "Stranger Things",
+      "The Walking Dead",
+      "Breaking Bad",
+      "Friends"
+    ],
+    "answer": "Stranger Things"
+  },
+  {
+    "question": "Vem regisserade filmen 'Titanic'?",
+    "options": [
+      "Steven Spielberg",
+      "James Cameron",
+      "Quentin Tarantino",
+      "Martin Scorsese"
+    ],
+    "answer": "James Cameron"
+  },
+  {
+    "question": "I vilken film finns karaktären Jack Sparrow?",
+    "options": [
+      "Pirates of the Caribbean",
+      "The Hobbit",
+      "The Matrix",
+      "Indiana Jones"
+    ],
+    "answer": "Pirates of the Caribbean"
+  },
+  {
+    "question": "Vad heter tv-serien där karaktärerna är 'The One Who Knocks'?",
+    "options": ["Breaking Bad", "Narcos", "The Sopranos", "Game of Thrones"],
+    "answer": "Breaking Bad"
+  },
+  {
+    "question": "Vilken skådespelare spelar Batman i filmerna från 2000-talet regisserade av Christopher Nolan?",
+    "options": [
+      "Christian Bale",
+      "Ben Affleck",
+      "Robert Pattinson",
+      "Michael Keaton"
+    ],
+    "answer": "Christian Bale"
+  },
+  {
+    "question": "I vilken film säger karaktären 'May the Force be with you'?",
+    "options": ["Star Wars", "Indiana Jones", "Jurassic Park", "The Avengers"],
+    "answer": "Star Wars"
+  },
+  {
+    "question": "Vilken film regisserade Quentin Tarantino som utspelar sig i en japansk miljö med samurajer?",
+    "options": [
+      "Kill Bill",
+      "Pulp Fiction",
+      "Inglourious Basterds",
+      "Django Unchained"
+    ],
+    "answer": "Kill Bill"
+  },
+  {
+    "question": "Vad heter den populära TV-serien om ett gäng vänner som bor i New York?",
+    "options": [
+      "Friends",
+      "How I Met Your Mother",
+      "The Office",
+      "Big Bang Theory"
+    ],
+    "answer": "Friends"
+  }
+]

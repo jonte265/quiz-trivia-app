@@ -1,5 +1,10 @@
 import { create } from 'zustand';
 import questions from '../data/questions.json';
+import food from '../data/food.json';
+import general from '../data/general.json';
+import movies from '../data/movies.json';
+import music from '../data/music.json';
+import sports from '../data/sports.json';
 
 // Function to mix questions json
 function shuffleQuestions() {
@@ -16,7 +21,9 @@ type GameStoreType = {
   gameCompleteMode: boolean;
   timesUpMode: boolean;
   homeScreen: boolean;
+  categoryPicked: string;
   nextAnswer: (answer: string) => void;
+  pickCategory: (answer: string) => void;
   restartGame: () => void;
   timesUp: () => void;
   homeScreenStartGame: () => void;
@@ -29,6 +36,7 @@ const useGameStore = create<GameStoreType>((set) => {
   return {
     score: 0,
     currentQuestionIndex: 0,
+    categoryPicked: 'Not picked',
 
     currentQuestion: shuffledQuestions[0].question,
     currentOptions: shuffledQuestions[0].options,
@@ -38,6 +46,13 @@ const useGameStore = create<GameStoreType>((set) => {
     gameCompleteMode: false,
     timesUpMode: false,
     homeScreen: true,
+
+    pickCategory: (category) =>
+      set(() => {
+        return {
+          categoryPicked: category,
+        };
+      }),
 
     nextAnswer: (answer) =>
       set((state) => {

@@ -1,0 +1,72 @@
+[
+  {
+    "question": "Vilket land vann FIFA World Cup 2018?",
+    "options": ["Brasilien", "Tyskland", "Frankrike", "Argentina"],
+    "answer": "Frankrike"
+  },
+  {
+    "question": "Vilken svensk fotbollsspelare spelar för LA Galaxy?",
+    "options": [
+      "Zlatan Ibrahimović",
+      "Henrik Larsson",
+      "Max Almén",
+      "Andreas Granqvist"
+    ],
+    "answer": "Zlatan Ibrahimović"
+  },
+  {
+    "question": "Vad kallas det största amerikanska fotbollsligan?",
+    "options": ["MLS", "NFL", "NBA", "NHL"],
+    "answer": "NFL"
+  },
+  {
+    "question": "Vem har flest Grand Slam-titlar i tennis?",
+    "options": [
+      "Roger Federer",
+      "Rafael Nadal",
+      "Serena Williams",
+      "Novak Djokovic"
+    ],
+    "answer": "Margaret Court"
+  },
+  {
+    "question": "Vilket land är kända för sin cricket?",
+    "options": ["Indien", "Kanada", "Tyskland", "USA"],
+    "answer": "Indien"
+  },
+  {
+    "question": "I vilken sport används en puck?",
+    "options": ["Fotboll", "Hockey", "Basket", "Handboll"],
+    "answer": "Hockey"
+  },
+  {
+    "question": "Vad är det största årliga cykelloppet i världen?",
+    "options": [
+      "Vuelta a España",
+      "Tour de France",
+      "Giro d'Italia",
+      "Paris-Roubaix"
+    ],
+    "answer": "Tour de France"
+  },
+  {
+    "question": "Vilken sport spelas i en arena med en oval form?",
+    "options": ["Futsal", "Baseboll", "Fotboll", "Rugby"],
+    "answer": "Rugby"
+  },
+  {
+    "question": "Vilken spelare har vunnit flest Ballon d'Or?",
+    "options": [
+      "Cristiano Ronaldo",
+      "Lionel Messi",
+      "Michel Platini",
+      "Johan Cruijff"
+    ],
+    "answer": "Lionel Messi"
+  },
+  {
+    "question": "Vilket år arrangerades de första moderna Olympiska Spelen?",
+    "options": ["1896", "1900", "1912", "1924"],
+    "answer": "1896"
+  }
+]
