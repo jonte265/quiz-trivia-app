@@ -32,7 +32,11 @@ function Timer() {
 
   return (
     <>
-      <p className='font-semibold text-right'>00:{timer}</p>
+      {timer < 10 ? (
+        <p className='font-semibold text-right'>00:0{timer}</p>
+      ) : (
+        <p className='font-semibold text-right'>00:{timer}</p>
+      )}
     </>
   );
 }
