@@ -15,9 +15,11 @@ type GameStoreType = {
   restartMode: boolean;
   gameCompleteMode: boolean;
   timesUpMode: boolean;
+  homeScreen: boolean;
   nextAnswer: (answer: string) => void;
   restartGame: () => void;
   timesUp: () => void;
+  homeScreenStartGame: () => void;
 };
 
 const useGameStore = create<GameStoreType>((set) => {
@@ -34,6 +36,7 @@ const useGameStore = create<GameStoreType>((set) => {
     restartMode: false,
     gameCompleteMode: false,
     timesUpMode: false,
+    homeScreen: true,
 
     nextAnswer: (answer) =>
       set((state) => {
@@ -87,6 +90,13 @@ const useGameStore = create<GameStoreType>((set) => {
         return {
           currentQuestion: 'Times up! Game Over 🚨',
           timesUpMode: true,
+        };
+      }),
+
+    homeScreenStartGame: () =>
+      set(() => {
+        return {
+          homeScreen: false,
         };
       }),
   };
