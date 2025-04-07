@@ -1,16 +1,19 @@
 import PrimaryBtn from './PrimaryBtn';
 import useGameStore from '../store/store.ts';
 import categories from '../data/categories.json';
-import { useState } from 'react';
+import { useEffect } from 'react';
 
 function HomeScreen() {
   const GameStore = useGameStore();
 
-  const [selectedCategory, setSelectedCategory] = useState<string>();
+  // Default init food category
+  useEffect(() => {
+    GameStore.pickCategory('food');
+  }, []);
 
   function handleSelect(e: React.ChangeEvent<HTMLSelectElement>) {
     const category = e.target.value;
-    setSelectedCategory(category);
+
     GameStore.pickCategory(category);
   }
 
@@ -33,7 +36,6 @@ function HomeScreen() {
             </option>
           ))}
         </select>
-        <p>{selectedCategory}</p>
       </div>
 
       <PrimaryBtn text='Start Now' onClick={GameStore.homeScreenStartGame} />
