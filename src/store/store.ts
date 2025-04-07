@@ -1,5 +1,4 @@
 import { create } from 'zustand';
-import questions from '../data/questions.json';
 import food from '../data/food.json';
 import general from '../data/general.json';
 import movies from '../data/movies.json';
