@@ -69,13 +69,14 @@ const useGameStore = create<GameStoreType>((set) => {
 
     nextAnswer: (answer) =>
       set((state) => {
+        const currentQuestions = shuffleQuestions(state.categoryPicked);
         // Check correct answer
         const isCorrect = answer === state.correctAnswer;
         const nextIndex = state.currentQuestionIndex + 1;
 
         if (isCorrect) {
           // Check if no more questions
-          if (nextIndex >= shuffledQuestions.length) {
+          if (nextIndex >= currentQuestions.length) {
             return {
               score: state.score + 1,
               currentQuestion: 'Game Complete! 🎉',
@@ -86,9 +87,9 @@ const useGameStore = create<GameStoreType>((set) => {
           return {
             currentQuestionIndex: nextIndex,
             score: state.score + 1,
-            currentQuestion: shuffledQuestions[nextIndex].question,
-            currentOptions: shuffledQuestions[nextIndex].options,
-            correctAnswer: shuffledQuestions[nextIndex].answer,
+            currentQuestion: currentQuestions[nextIndex].question,
+            currentOptions: currentQuestions[nextIndex].options,
+            correctAnswer: currentQuestions[nextIndex].answer,
           };
         } else {
           return {
