@@ -4,7 +4,7 @@ import useGameStore from '../store/store';
 function Timer() {
   const GameStore = useGameStore();
 
-  const [timer, setTimer] = useState(30);
+  const [timer, setTimer] = useState(60);
 
   useEffect(() => {
     if (
@@ -18,10 +18,10 @@ function Timer() {
         }, 1000);
       } else {
         GameStore.timesUp();
-        setTimer(30);
+        setTimer(60);
       }
     } else {
-      setTimer(30);
+      setTimer(60);
     }
   }, [
     GameStore.restartMode,
