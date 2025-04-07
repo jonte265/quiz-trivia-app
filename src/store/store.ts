@@ -7,7 +7,20 @@ import music from '../data/music.json';
 import sports from '../data/sports.json';
 
 // Function to mix questions json
-function shuffleQuestions() {
+function shuffleQuestions(cat) {
+  let newShuffle;
+  if (cat === 'food') {
+    return (newShuffle = food);
+  } else if (cat === 'movies') {
+    return (newShuffle = movies);
+  } else if (cat === 'general') {
+    return (newShuffle = general);
+  } else if (cat === 'music') {
+    return (newShuffle = music);
+  } else if (cat === 'sports') {
+    return (newShuffle = sports);
+  } else {
+  }
   return [...questions].sort(() => Math.random() - 0.5);
 }
 
@@ -31,7 +44,7 @@ type GameStoreType = {
 };
 
 const useGameStore = create<GameStoreType>((set) => {
-  const shuffledQuestions = shuffleQuestions();
+  const shuffledQuestions = shuffleQuestions('food');
 
   return {
     score: 0,
@@ -87,7 +100,7 @@ const useGameStore = create<GameStoreType>((set) => {
 
     restartGame: () =>
       set(() => {
-        const newShuffledQuestions = shuffleQuestions();
+        const newShuffledQuestions = shuffleQuestions('music');
 
         return {
           score: 0,
@@ -112,7 +125,7 @@ const useGameStore = create<GameStoreType>((set) => {
     //Home screen start game and restart settings
     homeScreenStartGame: () =>
       set(() => {
-        const newShuffledQuestions = shuffleQuestions();
+        const newShuffledQuestions = shuffleQuestions('sports');
 
         return {
           homeScreen: false,
