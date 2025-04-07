@@ -37,3 +37,5 @@ Check out live version here: https://quiz-app358.netlify.app/
 📈 Progress bar to track quiz completion
 
 🔀 Randomized question order
+
+📂 Option to select quiz category
