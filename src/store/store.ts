@@ -7,7 +7,7 @@ import music from '../data/music.json';
 import sports from '../data/sports.json';
 
 // Function to mix questions json
-function shuffleQuestions(cat) {
+function shuffleQuestions(cat: string) {
   if (cat === 'food') {
     return food.sort(() => Math.random() - 0.5);
   } else if (cat === 'movies') {

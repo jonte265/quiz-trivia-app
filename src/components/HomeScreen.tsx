@@ -8,7 +8,7 @@ function HomeScreen() {
 
   const [selectedCategory, setSelectedCategory] = useState<string>();
 
-  function handleSelect(e) {
+  function handleSelect(e: React.ChangeEvent<HTMLSelectElement>) {
     const category = e.target.value;
     setSelectedCategory(category);
     GameStore.pickCategory(category);
