@@ -21,16 +21,6 @@ function HomeScreen() {
       </h1>
       <h2>Pick a category:</h2>
       <div className='flex flex-wrap justify-center items-center gap-4'>
-        {/* {categories.map((category, index) => (
-          <button
-            key={index}
-            onClick={() => GameStore.pickCategory(category.id)}
-            className='py-4 w-full font-semibold bg-text text-background rounded-full hover:bg-text/80  transition duration-200 ease-in-out cursor-pointer active:scale-98 hover:scale-102'
-          >
-            {category.name}
-          </button>
-        ))} */}
-
         <select
           onChange={handleSelect}
           className='py-2 px-4 font-semibold bg-text text-background

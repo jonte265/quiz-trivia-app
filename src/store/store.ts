@@ -8,20 +8,19 @@ import sports from '../data/sports.json';
 
 // Function to mix questions json
 function shuffleQuestions(cat) {
-  let newShuffle;
   if (cat === 'food') {
-    return (newShuffle = food);
+    return food.sort(() => Math.random() - 0.5);
   } else if (cat === 'movies') {
-    return (newShuffle = movies);
+    return movies.sort(() => Math.random() - 0.5);
   } else if (cat === 'general') {
-    return (newShuffle = general);
+    return general.sort(() => Math.random() - 0.5);
   } else if (cat === 'music') {
-    return (newShuffle = music);
+    return music.sort(() => Math.random() - 0.5);
   } else if (cat === 'sports') {
-    return (newShuffle = sports);
+    return sports.sort(() => Math.random() - 0.5);
   } else {
+    return movies.sort(() => Math.random() - 0.5);
   }
-  return [...movies].sort(() => Math.random() - 0.5);
 }
 
 type GameStoreType = {
@@ -35,6 +34,7 @@ type GameStoreType = {
   timesUpMode: boolean;
   homeScreen: boolean;
   categoryPicked: string;
+  shuffledQuestionsArr: any;
   nextAnswer: (answer: string) => void;
   pickCategory: (answer: string) => void;
   restartGame: () => void;
@@ -50,6 +50,7 @@ const useGameStore = create<GameStoreType>((set) => {
     score: 0,
     currentQuestionIndex: 0,
     categoryPicked: 'Not picked',
+    shuffledQuestionsArr: [],
 
     currentQuestion: shuffledQuestions[0].question,
     currentOptions: shuffledQuestions[0].options,
@@ -62,14 +63,16 @@ const useGameStore = create<GameStoreType>((set) => {
 
     pickCategory: (category) =>
       set(() => {
+        const newShuffledQuestionsArr = shuffleQuestions(category); // Shuffle questions once
         return {
           categoryPicked: category,
+          shuffledQuestionsArr: newShuffledQuestionsArr,
         };
       }),
 
     nextAnswer: (answer) =>
       set((state) => {
-        const currentQuestions = shuffleQuestions(state.categoryPicked);
+        const currentQuestions = state.shuffledQuestionsArr;
         // Check correct answer
         const isCorrect = answer === state.correctAnswer;
         const nextIndex = state.currentQuestionIndex + 1;
@@ -101,7 +104,7 @@ const useGameStore = create<GameStoreType>((set) => {
 
     restartGame: () =>
       set((state) => {
-        const newShuffledQuestions = shuffleQuestions(state.categoryPicked);
+        const newShuffledQuestions = state.shuffledQuestionsArr;
 
         return {
           score: 0,
@@ -126,7 +129,7 @@ const useGameStore = create<GameStoreType>((set) => {
     //Home screen start game and restart settings
     homeScreenStartGame: () =>
       set((state) => {
-        const newShuffledQuestions = shuffleQuestions(state.categoryPicked);
+        const newShuffledQuestions = state.shuffledQuestionsArr;
 
         return {
           homeScreen: false,
