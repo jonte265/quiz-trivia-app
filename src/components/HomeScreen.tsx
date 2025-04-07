@@ -9,8 +9,9 @@ function HomeScreen() {
   const [selectedCategory, setSelectedCategory] = useState<string>();
 
   function handleSelect(e) {
-    setSelectedCategory(e.target.value);
-    GameStore.pickCategory(selectedCategory ?? 'general');
+    const category = e.target.value;
+    setSelectedCategory(category);
+    GameStore.pickCategory(category);
   }
 
   return (

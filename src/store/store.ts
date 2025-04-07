@@ -21,7 +21,7 @@ function shuffleQuestions(cat) {
     return (newShuffle = sports);
   } else {
   }
-  return [...questions].sort(() => Math.random() - 0.5);
+  return [...movies].sort(() => Math.random() - 0.5);
 }
 
 type GameStoreType = {
@@ -99,8 +99,8 @@ const useGameStore = create<GameStoreType>((set) => {
       }),
 
     restartGame: () =>
-      set(() => {
-        const newShuffledQuestions = shuffleQuestions('music');
+      set((state) => {
+        const newShuffledQuestions = shuffleQuestions(state.categoryPicked);
 
         return {
           score: 0,
@@ -124,8 +124,8 @@ const useGameStore = create<GameStoreType>((set) => {
 
     //Home screen start game and restart settings
     homeScreenStartGame: () =>
-      set(() => {
-        const newShuffledQuestions = shuffleQuestions('sports');
+      set((state) => {
+        const newShuffledQuestions = shuffleQuestions(state.categoryPicked);
 
         return {
           homeScreen: false,
