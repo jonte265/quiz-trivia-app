@@ -11,6 +11,7 @@ function GameStart() {
 
   const [randomizeAnswers, setRandomizeAnswers] = useState(['']);
 
+  // Randomize answer order
   useEffect(() => {
     const shuffledAnswers = [...GameStore.currentOptions].sort(
       () => Math.random() - 0.5
